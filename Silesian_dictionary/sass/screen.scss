@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+$yellow_color: #fff212;
+$section_color: #0f6eb2;
+$blue_color: #02bbfe;
+$text_color: #4a4a49;
+$dark_color: #383837;
+$darker_color: #2b2b2a;
+
+h2, h3, p{
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    background-color: $yellow_color;
+    background-image: url('../img/silesian_logo.png');
+    background-repeat: no-repeat;
+    background-position: 8% 50%;
+    color: $text_color;
+    height: 180px;
+    width: 50%;
+    margin: 50px auto 0px;
+    border-radius: 8px 8px 0px 0px;
+    text-align: left;
+}
+
+#header_name{
+   margin: 20px auto;
+   transform: translate(66%, 0%);
+   display: inline-block;
+}
+
+.wrapper{
+    position: relative;
+    background-color: $text_color;
+    background-image:url('../img/silesia_wrapper_s.png'); 
+	background-size: contain; background-repeat: no-repeat;
+	background-position: right;
+    color: $text_color;
+    height: 300px;
+    width: 50%;
+    margin: 0px auto;
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+}
+
+.words{
+    width: 28%;
+    margin-left: 10px;
+    padding-top: 10px;
+    float: left;
+    button{
+        height: 24px;
+        background-color: $yellow_color;
+        border: none;
+        outline: none;
+        border-radius: 4px;          
+    }
+        button:hover{
+            cursor: pointer;
+            color: $yellow_color;
+            background: $dark_color;
+        }
+        button:active{
+            background: $darker_color;
+        }
+    input{
+        height: 20px;
+        width: 67%;
+        padding: 0px 5px;
+        margin: 0px 5px;
+        background-color: $yellow_color;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        font-size: 14px
+    }
+}
+#word_list{
+    margin: 10px auto;
+    max-height: 240px;
+    width: 70%;
+    overflow-y: scroll;
+    color: $yellow_color;
+    ul{
+        width: 90%;
+        float: left;
+    }
+    li{
+        margin-left: -30px;
+        list-style-type: none;
+        text-align: left;
+    }
+    li:hover{
+        cursor: pointer;
+        color: white;
+    }
+}
+    
+.word{
+    width: 47%;
+    float: left;
+    text-align: left;
+    margin-left: 5px;
+    padding: 20px;
+}
+ul{
+    margin-left: -10px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 23px;    
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color:$yellow_color;
+    border-radius: 5px; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $dark_color;
+    width: 10px;
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $darker_color; 
+}
+#related_words{
+    color: white;
+    list-style-type: none;
+}

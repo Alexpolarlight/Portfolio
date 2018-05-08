@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<body>
+<html>
+<head>
+    <title>Silesian Dictionary</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, 
+	initial-scale=1">
+	<meta name="description" content="Develope Group">
+	<meta name="keywords" content="HTML, CSS, XML, JavaScript">
+	<meta name="author" content="Alexandr Kulakov">
+	<link href="https://fonts.googleapis.com/css?family=Lato" 
+	rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+		<link href="stylesheets/screen.css" media="screen, projection" 
+		rel="stylesheet" type="text/css" />
+		<script src="jquery-3.3.1.js"></script>
+</head>
+
+<body>
+   <div class="header">
+			<div id="header_name">
+		 	<h1>Ukrainian - Silesian <br> Dictionary</h1>
+		</div>		 
+   </div>
+	
+		<div class="wrapper">	
+		<div class="words">
+			<input type="text" id="search" placeholder="search...">
+			<button onclick="search()">Go</button>
+			<ul id="word_list"></ul>
+		</div>
+		<div class="word">
+			<h2 id="word_text"></h2>
+			<p id="word_definition"></p>
+			<hr>
+			<h3 id="related_header"></h3>
+			<li id="related_words"></li>
+		</div>
+	</div>
+
+</body>
+</html>
+<script type="text/javascript">
+var dictionary = [
+					{ 
+					  word: "apple",
+					  def: "a round fruit with seed at its center",
+					  rel: ["mango", "pear", "guava"]
+					},
+					{
+					  word: "baby",
+					  def: "the young one of a human",
+					  rel: ["child", "todler", "teen"]
+					},
+					{
+					  word: "car",
+					  def: "transports people from place to place",
+					  rel: ["bike", "truck", "bicycle"]
+					},
+					{
+					  word: "computer",
+					  def: "an elecronic device",
+					  rel: ["laptop", "smartphone", "palmtop"]
+					},
+					{
+					  word: "mosquito",
+					  def: "an insect",
+					  rel: ["ant", "beetle", "buterfly"]
+					},
+					{ 
+					  word: "apple",
+					  def: "a round fruit with seed at its center",
+					  rel: ["mango", "pear", "guava"]
+					},
+					{
+					  word: "baby",
+					  def: "the young one of a human",
+					  rel: ["child", "todler", "teen"]
+					},
+					{
+					  word: "car",
+					  def: "transports people from place to place",
+					  rel: ["bike", "truck", "bicycle"]
+					},
+					{
+					  word: "computer",
+					  def: "an elecronic device",
+					  rel: ["laptop", "smartphone", "palmtop"]
+					},
+					{
+					  word: "mosquito",
+					  def: "an insect",
+					  rel: ["ant", "beetle", "buterfly"]
+					},
+					{ 
+					  word: "apple",
+					  def: "a round fruit with seed at its center",
+					  rel: ["mango", "pear", "guava"]
+					},
+					{
+					  word: "baby",
+					  def: "the young one of a human",
+					  rel: ["child", "todler", "teen"]
+					},
+					{
+					  word: "car",
+					  def: "transports people from place to place",
+					  rel: ["bike", "truck", "bicycle"]
+					},
+					{
+					  word: "computer",
+					  def: "an elecronic device",
+					  rel: ["laptop", "smartphone", "palmtop"]
+					},
+					{
+					  word: "mosquito",
+					  def: "an insect",
+					  rel: ["ant", "beetle", "buterfly"]
+					},
+]
+//fill the dictionary with words
+var init = function(){
+	for (i = 0; i < dictionary.length; i++){
+		document.getElementById("word_list").innerHTML += 
+		"<li onclick = 'show("+ i +")'>" + dictionary[i].word + 
+		"</li>";
+	}
+}
+//call the init function when the page loads
+init();
+
+//reveal words definitions
+var show = function(i){
+	document.getElementById("word_text").innerHTML = 
+	dictionary[i].word;
+	document.getElementById("word_definition").innerHTML = 
+	dictionary[i].def;
+	document.getElementById("related_header").innerHTML =
+	"Related words:";
+
+	var list = " ";
+	for(j = 0; j < dictionary[i].rel[j].length; j++){
+		list += '<li>' + dictionary[i].rel[j] + '</li>';
+	  document.getElementById("related_words").innerHTML = 
+	  list;
+	}
+}
+// show first word in dictionary
+show(0);
+
+// show functionality
+
+function search(){
+	var query = document.getElementById("search").value;
+	if(query == ""){
+		  document.getElementById("word_text").innerHTML = 
+			"<br>";
+			document.getElementById("word_definition").innerHTML = 
+			"Please enter the word and then push 'Go' button";
+			document.getElementById("related_words").innerHTML = 
+			"";
+			document.getElementById("related_header").innerHTML ="";
+			return;
+	}
+	var found = -1; // initialize found to false
+
+	for(i = 0; i < dictionary.length; i++){
+		if(query == dictionary[i].word){
+			found = i;
+			break;
+		} else{
+			document.getElementById("word_text").innerHTML = 
+			"<br>";
+			document.getElementById("word_definition").innerHTML = 
+			"The word you interested is not found in our dictionary";
+			document.getElementById("related_words").innerHTML = 
+			"There is no related words";
+			document.getElementById("related_header").innerHTML = "";
+			
+		}
+	}
+	if(found >= 0){
+			show(found);
+	}
+}
+</script>

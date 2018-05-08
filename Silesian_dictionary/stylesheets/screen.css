@@ -1,0 +1,140 @@
+/* line 1, ../sass/screen.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif; }
+
+/* line 15, ../sass/screen.scss */
+h2, h3, p {
+  color: white;
+  padding: 0;
+  margin: 0; }
+
+/* line 21, ../sass/screen.scss */
+.header {
+  background-color: #fff212;
+  background-image: url("../img/silesian_logo.png");
+  background-repeat: no-repeat;
+  background-position: 8% 50%;
+  color: #4a4a49;
+  height: 180px;
+  width: 50%;
+  margin: 50px auto 0px;
+  border-radius: 8px 8px 0px 0px;
+  text-align: left; }
+
+/* line 34, ../sass/screen.scss */
+#header_name {
+  margin: 20px auto;
+  transform: translate(66%, 0%);
+  display: inline-block; }
+
+/* line 40, ../sass/screen.scss */
+.wrapper {
+  position: relative;
+  background-color: #4a4a49;
+  background-image: url("../img/silesia_wrapper_s.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #4a4a49;
+  height: 300px;
+  width: 50%;
+  margin: 0px auto;
+  border-radius: 0 0 8px 8px;
+  text-align: center; }
+
+/* line 54, ../sass/screen.scss */
+.words {
+  width: 28%;
+  margin-left: 10px;
+  padding-top: 10px;
+  float: left; }
+  /* line 59, ../sass/screen.scss */
+  .words button {
+    height: 24px;
+    background-color: #fff212;
+    border: none;
+    outline: none;
+    border-radius: 4px; }
+  /* line 66, ../sass/screen.scss */
+  .words button:hover {
+    cursor: pointer;
+    color: #fff212;
+    background: #383837; }
+  /* line 71, ../sass/screen.scss */
+  .words button:active {
+    background: #2b2b2a; }
+  /* line 74, ../sass/screen.scss */
+  .words input {
+    height: 20px;
+    width: 67%;
+    padding: 0px 5px;
+    margin: 0px 5px;
+    background-color: #fff212;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 14px; }
+
+/* line 86, ../sass/screen.scss */
+#word_list {
+  margin: 10px auto;
+  max-height: 240px;
+  width: 70%;
+  overflow-y: scroll;
+  color: #fff212; }
+  /* line 92, ../sass/screen.scss */
+  #word_list ul {
+    width: 90%;
+    float: left; }
+  /* line 96, ../sass/screen.scss */
+  #word_list li {
+    margin-left: -30px;
+    list-style-type: none;
+    text-align: left; }
+  /* line 101, ../sass/screen.scss */
+  #word_list li:hover {
+    cursor: pointer;
+    color: white; }
+
+/* line 107, ../sass/screen.scss */
+.word {
+  width: 47%;
+  float: left;
+  text-align: left;
+  margin-left: 5px;
+  padding: 20px; }
+
+/* line 114, ../sass/screen.scss */
+ul {
+  margin-left: -10px; }
+
+/* width */
+/* line 118, ../sass/screen.scss */
+::-webkit-scrollbar {
+  width: 23px; }
+
+/* Track */
+/* line 123, ../sass/screen.scss */
+::-webkit-scrollbar-track {
+  background-color: #fff212;
+  border-radius: 5px; }
+
+/* Handle */
+/* line 129, ../sass/screen.scss */
+::-webkit-scrollbar-thumb {
+  background: #383837;
+  width: 10px;
+  border-radius: 4px; }
+
+/* Handle on hover */
+/* line 136, ../sass/screen.scss */
+::-webkit-scrollbar-thumb:hover {
+  background: #2b2b2a; }
+
+/* line 139, ../sass/screen.scss */
+#related_words {
+  color: white;
+  list-style-type: none; }
